@@ -1,0 +1,366 @@
+1.  get all feeds api
+  url:  /m/feeds?type={type}&types={types}&index={index}&pageSize={pageSize}
+  method: GET
+  return json format:
+  {
+	  total: 50,
+	  index: 0,
+	  pageSize: 3,
+	  feeds: [
+		{
+		  _id: "647328560865222700",
+		  content: ".@Gartner_Inc on #infrastructure agility and why it's necessary for #innovation http://t.co/CyvaeFCYpc",
+		  username: "Avaya UK",
+		  thumbnail: "http://pbs.twimg.com/profile_images/378800000186098073/d9897fbec34e96cf827ac57ef6cd6020_normal.png",
+		  numLike: 0,
+		  timestamp: "2015-09-25T08:35:30.000Z",
+		  likers: [ ],
+		  comments: [ ],
+		  tags: "avaya",
+		  type: "twitter",
+		  target: "None",
+		  targetUrl: "",
+		  max: 5,
+		  include: true,
+		  streamType: "home",
+		  userTitle: ""
+		},
+		{
+		  _id: "1081573274073904340_194298788",
+		  include: true,
+		  streamType: "home",
+		  type: "instagram",
+		  content: "Walang makakapigil samin! 😂😂😂 #avaya #kabalan...",
+		  assetUrl: "https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/sh0.08/e35/11821719_477340399103457_2038843871_n.jpg",
+		  target: "None",
+		  targetUrl: "",
+		  max: 5,
+		  username: "reenry",
+		  thumbnail: "https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-19/s150x150/11264764_757929730986024_1249276186_a.jpg",
+		  numLike: 0,
+		  likers: [ ],
+		  timestamp: "2015-09-25T04:00:03.000Z",
+		  comments: [ ],
+		  tags: "avaya",
+		  userTitle: ""
+		},
+		{
+		  userTitle: "Eng",
+		  _id: "56026251aea97e9201b21abc",
+		  type: "uImage",
+		  streamType: "home",
+		  thumbnail: "face.jpg",
+		  username: "Jimmy2 Chan",
+		  comments: [
+			{
+			  _id: "5602755caea97e9201b21ee9",
+			  thumbnail: "face.jpg",
+			  content: "fghfghfghfghfghfghghh",
+			  username: "Jimmy2 Chan",
+			  useremail: "jimmy_chan@designreactor.com",
+			  timestamp: "2015-09-23T09:48:12.201Z"
+			},
+			{
+			  _id: "56027565aea97e9201b21eea",
+			  thumbnail: "face.jpg",
+			  content: "hhh",
+			  username: "Jimmy2 Chan",
+			  useremail: "jimmy_chan@designreactor.com",
+			  timestamp: "2015-09-23T09:48:21.001Z"
+			}
+		  ],
+		  timestamp: "2015-09-23T08:26:57.270Z",
+		  likers: [
+			"jimmy_chan@designreactor.com"
+		  ],
+		  numLike: 1,
+		  max: 5,
+		  targetUrl: "",
+		  target: "",
+		  assetUrl: "1442996817270.png",
+		  content: "Bhhgfggghi",
+		  include: true
+		}
+	  ]
+	}
+
+
+2. get comments under the feed:
+  url:  /m/feeds/{feedId}
+  method: GET
+  return json format:
+	[
+	  {
+		_id: "5602755caea97e9201b21ee9",
+		thumbnail: "face.jpg",
+		content: "fghfghfghfghfghfghghh",
+		username: "Jimmy2 Chan",
+		useremail: "jimmy_chan@designreactor.com",
+		timestamp: "2015-09-23T09:48:12.201Z"
+	  },
+	  {
+		_id: "56027565aea97e9201b21eea",
+		thumbnail: "face.jpg",
+		content: "hhh",
+		username: "Jimmy2 Chan",
+		useremail: "jimmy_chan@designreactor.com",
+		timestamp: "2015-09-23T09:48:21.001Z"
+	  }
+	]
+
+3. post a feed:
+  url:  /m/feeds
+  method: Post
+  Request Body:
+  {
+    "type": "uImage",
+    "streamType": "home",
+    "content": "Photo upload by the CEO",
+    "username": "Mary Jason",
+	"useremail": "test@test.com"
+	"imageData": ""
+  }
+  or
+  {
+	"type": "uMessage",
+	"streamType": "home",
+	"content": "post text message",
+	"username": "Mary Jason",
+	"useremail": "test@test.com",
+	"imageData": ""
+  }
+
+4. post a comment under the feed:
+    url:  /m/feeds/{feedId}
+    method: Post
+    Request Body:
+    {
+      "username" : "Mary Janson",
+	  "useremail": "test@test.com",
+      "content" : "I think it's wonderful that you're having such a great time. So romantic!"
+    }
+	
+5. post like under the feed:
+    url:  /m/like?feedId={feedId}&type={type}&useremail={useremail}
+    method: Post
+    Request Body:
+    {}
+	return result:
+	{numLike: 1, type: 1}
+	Notes: the 'type', return 1 means liked, 0 for unliked
+	
+6. user register:	
+  url:  /m/register
+  method: Post
+  Request Body:
+  {
+	"email": "test@gmail.com",
+	"password": "123456",
+	"firstName": "Moonny",
+	"lastName": "Qiu"
+  }
+  return result:
+  {result: 'succeeded', id: "user id"}
+  
+7. user login:
+  url:  /m/login
+  method: Post
+  Request Body:
+  {
+		type: "facebook",         				// app, facebook, twitter, linkedin
+		id: "facebook id",          		    // email,facebook id,twitter id,linkedin id
+		token: "facebook token",    			// just for facebook, twitter, linkedin
+		email:"test@gmail.com",         		// user email
+		password: "",     						// just for app login, user password
+		firstName: "Moonny",            		// user first name
+		lastName: "Qiu",                		// user last name
+		imageUrl: "htt://image/profile.png",    // user profile image url
+		deviceToken: "60d5d3cf7..." 			// user device token, for push notification
+  }
+  return result:
+  {
+	  "result":"succeeded",
+	  "type":"facebook",
+	  "id":"facebook id",
+	  "token":"facebook token",
+	  "email":"test@gmail.com",
+	  "imageUrl":"htt://image/profile.png",
+	  "firstName":"Moonny",
+	  "lastName":"Qiu",
+	  "accessToken":"5637286025c59ddc21af4240"  // for access backend api
+	}
+	
+8. update user picture:
+	url:  /m/update-picture
+    method: Post
+	request body:
+	{
+		"useremail": "moonny@126.com",
+		"imageData": "data:image/png;base64,xxx..."
+	}
+	return result:
+	{
+		"result":"succeeded",
+		"id":"55fa3ce2aeff0f4c24cbb043",
+		"imageUrl": "1231312.jpg"
+	}
+	
+9. get a poll:
+	url:  /m/poll/{id}
+    method: Get
+	return result:
+	{
+	  "id": "56388a6e7ca178a12390795c",
+	  "promoImage": "promo.jpg",
+	  "pollInfo": "Tell us what you think!",
+	  "question": "who is the most valueable player on the San Jose Earthquakes this year?",
+	  "answers": [
+		{"_id":"56388a6e7ca178a12390795f","answer":"Chris Woodolowski"},
+		{"_id":"56388a6e7ca178a12390795d","answer":"Shea Salinas"},
+		{"_id":"56388a6e7ca178a12390795e","answer":"Matias Perez Garcia"}
+	  ]
+	}
+	
+10. post poll answer:
+	url:  /m/poll
+    method: Post
+	request body:
+	{
+	  "id": "56388a6e7ca178a12390795c",
+	  "email": "test@test.com",
+	  "answerId": "56388a6e7ca178a12390795f"
+	}
+	return result:
+	{
+	  "id": "56388a6e7ca178a12390795c",
+	  "completionImage": "completion.jpg",
+	  "submitMessage": "Thanks for completing the poll! Here's what others think:",
+	  "question": "who is the most valueable player on the San Jose Earthquakes this year?",
+	  "answers": [
+		{"answer": "Chris Woodolowski", "rate": "75%"},
+		{"answer": "Shea Salinas", "rate": "14%"},
+		{"answer": "Matias Perez Garcia", "rate": "11%"}
+	  ]
+	}
+	
+
+11. Get loading images:
+	url:  /m/loading-images
+    method: Get
+	return result:
+	[
+	  {
+		imageName: "Quakes hashtag promo",
+		imageUrl: "promo.jpg"
+	  },
+	  {
+		imageName: "MPG",
+		imageUrl: "mpg.jpg"
+	  },
+	  {
+		imageName: "Shea Salinas",
+		imageUrl: "salinas.jpg"
+	  }
+	]
+	
+12. Get home promos
+	url:  /m/home-promos
+    method: Get
+	return result:
+	[
+	  {
+		imageName: "Quakes hashtag promo",
+		imageUrl: "promo.jpg",
+		target: "None",
+		targetUrl: "",
+	  },
+	  {
+		imageName: "MPG",
+		imageUrl: "mpg.jpg",
+		target: "External URL",
+		targetUrl: "http://avaya.cxapp.io",
+	  },
+	  {
+		imageName: "Shea Salinas",
+		imageUrl: "salinas.jpg",
+		target: "iFrame URL",
+		targetUrl: "http://avaya.cxapp.io",
+	  },
+	  {
+		imageName: "Quakes hashtag promo",
+		imageUrl: "promo.jpg",
+		target: "App Page",
+		targetUrl: "Social Media",
+	  },
+	]	
+
+13. Get the notifications list:
+	url:  m/notifications
+    method: Get
+	return result:
+	[
+	  {
+		message: "none target notification",
+		date: "2015-11-17T08:40:47.055Z",
+		type: "None",
+		linkTo: ""
+	  },
+	  {
+		message: "External Link notification",
+		date: "2015-11-17T08:40:47.055Z",
+		type: "External Link",
+		linkTo: "http://avaya.cxapp.io"
+	  },
+	  {
+		message: "App page notification",
+		date: "2015-11-17T08:40:47.055Z",
+		type: "App page",
+		linkTo: "Social media"
+	  },
+	  {
+		message: "Poll notification",
+		date: "2015-11-17T08:40:47.055Z",
+		type: "Poll",
+		linkTo: "56388a6e7ca178a12390795c"  // poll id, use the id to get poll info
+	  },
+	]	
+
+	
+14. Forget password:
+	url:  /m/forgot-password
+    method: Post
+	request body:
+	{
+	  "email": "test@test.com"
+	}
+	return result:
+	{"result": "succeeded"}
+	or
+	{"result": "failed","error":"error message"}
+
+15. Check reset token:
+	url:  /m/check-reset-token
+    method: Post
+	request body:
+	{
+	  "email": "test@test.com",
+	  "token": 1234
+	}
+	return result:
+	{"result": "succeeded"}
+	or
+	{"result": "failed","error":"error message"}
+	
+16. Reset password:
+	url:  /m/reset-password
+    method: Post
+	request body:
+	{
+	  "email": "test@test.com",
+	  "token": 1234,
+	  "password": "123456"
+	}
+	return result:
+	{"result": "succeeded"}
+	or
+	{"result": "failed","error":"error message"}
