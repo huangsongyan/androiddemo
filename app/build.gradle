@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.0 rc1"
+
+    defaultConfig {
+        applicationId "com.hubery.androiddemo"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    //mavenCentral()，有无都可以，应为jcenter默认包含maven
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    //图片加载
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //http客户端
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    //rest api
+    compile 'com.squareup.retrofit2:retrofit:2.0.0'
+    //converter-gson
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+    //adapter-rxjava
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
+    //sqlite orm
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    //响应式开发
+    compile 'io.reactivex:rxandroid:1.1.0'
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    compile 'io.reactivex:rxjava:1.1.0'
+    //注解
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+
+}
