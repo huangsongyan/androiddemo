@@ -1,16 +1,16 @@
-package com.hubery.androiddemo;
+package com.hubery.androiddemo.ui.base.ndk;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.hubery.androiddemo.R;
 import com.hubery.androiddemo.comment.AppAdapter;
 import com.hubery.androiddemo.comment.ViewHolder;
 import com.hubery.androiddemo.ui.base.BaseActivity;
-import com.hubery.androiddemo.ui.base.ndk.NdkDemo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,12 +19,16 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.OnItemClick;
 
-public class MainActivity extends BaseActivity {
+/**
+ * Created by Administrator on 2016/3/24.
+ */
+public class NdkDemo extends BaseActivity {
+
 
     @Bind(R.id.demoListView)
     ListView mDemoListView;
 
-    private String[] mData = {"ui","第三方库","NDK","自定义控件","沉浸式"};
+    private String[] mData = {"+","-","x","/"};
     private List<String> mList;
 
     @Override
@@ -56,13 +60,6 @@ public class MainActivity extends BaseActivity {
 
     @OnItemClick(R.id.demoListView)
     public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-        switch (position){
-            case 1:
-                break;
-            case 2:
-                startActivity(new Intent(this, NdkDemo.class));
-                return;
-        }
         showToast(position+"");
     }
 }
