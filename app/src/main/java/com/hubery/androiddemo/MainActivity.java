@@ -10,7 +10,8 @@ import android.widget.TextView;
 import com.hubery.androiddemo.comment.AppAdapter;
 import com.hubery.androiddemo.comment.ViewHolder;
 import com.hubery.androiddemo.ui.base.BaseActivity;
-import com.hubery.androiddemo.ui.base.ndk.NdkDemo;
+import com.hubery.androiddemo.jni.JniCore;
+import com.hubery.androiddemo.jni.NdkDemo;
 
 import java.util.ArrayList;
 import java.util.Arrays;

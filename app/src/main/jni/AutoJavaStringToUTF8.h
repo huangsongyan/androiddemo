@@ -1,0 +1,14 @@
+//
+// Created by Administrator on 2016/3/25.
+//
+
+#ifndef ANDROIDDEMO_AUTOJAVASTRINGTOUTF8_H
+#define ANDROIDDEMO_AUTOJAVASTRINGTOUTF8_H
+
+
+class AutoJavaStringToUTF8 {
+
+};
+
+
+#endif //ANDROIDDEMO_AUTOJAVASTRINGTOUTF8_H

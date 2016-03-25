@@ -10,11 +10,36 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        ndk {
+            moduleName "myjni"
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+            //cFlags "-std=c++11 -fexceptions"
+            // stl "stlport_shared"  这个发现在模拟器找不到 libstlport_shared.so
+            // stl "gnustl_static" 这个可以通过
+            stl "stlport_static"
+            ldLibs "log"
+            // ldLibs "log", "EGL", "android", "jnigraphics", "GLESv1_CM"
+
+            /*
+   * Other ndk flags configurable here are
+   * cppFlags.add("-fno-rtti")
+   * cppFlags.add("-fno-exceptions")
+   * ldLibs.addAll(["android", "log"])
+   * stl       = "system"
+   */
+        }
     }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
         }
     }
 }

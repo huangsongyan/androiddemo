@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.base.ndk.NdkDemo"/>
+        <activity android:name=".jni.NdkDemo"/>
     </application>
 
 </manifest>
