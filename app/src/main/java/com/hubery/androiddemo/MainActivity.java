@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.google.zxing.BarcodeFormat;
 import com.hubery.androiddemo.comment.AppAdapter;
 import com.hubery.androiddemo.comment.ViewHolder;
+import com.hubery.androiddemo.thread.ThreadPoolManager;
+import com.hubery.androiddemo.ui.QRImage;
 import com.hubery.androiddemo.ui.base.BaseActivity;
 import com.hubery.androiddemo.jni.JniCore;
 import com.hubery.androiddemo.jni.NdkDemo;
@@ -34,6 +36,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initData();
+        new ThreadPoolManager(10).test2();
     }
 
     @Override
@@ -59,6 +62,8 @@ public class MainActivity extends BaseActivity {
     @OnItemClick(R.id.demoListView)
     public void onItemClick(AdapterView<?> parent, View view, int position, long id){
         switch (position){
+            case 0:
+                startActivity(new Intent(this, QRImage.class));
             case 1:
                 break;
             case 2:

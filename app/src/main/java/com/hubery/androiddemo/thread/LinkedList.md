@@ -1,0 +1,1 @@
+### linkedlist  asyncTasks.removeFirst() : asyncTasks.removeLast(); 可用于部分线程的处理

@@ -364,6 +364,7 @@ final class QRCodeEncoder {
     int width = result.getWidth();
     int height = result.getHeight();
     int[] pixels = new int[width * height];
+    //遍历每一行
     for (int y = 0; y < height; y++) {
       int offset = y * width;
       for (int x = 0; x < width; x++) {
