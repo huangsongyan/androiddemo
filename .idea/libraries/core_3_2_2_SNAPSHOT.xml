@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="core-3.2.2-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.2-SNAPSHOT/2a8f4a314b14ddad889a59b69f9731e452b38734/core-3.2.2-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.2-SNAPSHOT/d148a9b7218732bf53c7e9a6adde43110a41fae3/core-3.2.2-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

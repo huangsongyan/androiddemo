@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.zxing.BarcodeFormat;
 import com.hubery.androiddemo.comment.AppAdapter;
 import com.hubery.androiddemo.comment.ViewHolder;
 import com.hubery.androiddemo.ui.base.BaseActivity;
@@ -27,7 +28,7 @@ public class MainActivity extends BaseActivity {
 
     private String[] mData = {"ui","第三方库","NDK","自定义控件","沉浸式"};
     private List<String> mList;
-
+    private BarcodeFormat format;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
