@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="ijkplayer-java-0.4.5.1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/ijkplayer/build/intermediates/exploded-aar/tv.danmaku.ijk.media/ijkplayer-java/0.4.5.1/res" />
+      <root url="jar://$PROJECT_DIR$/ijkplayer/build/intermediates/exploded-aar/tv.danmaku.ijk.media/ijkplayer-java/0.4.5.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/tv.danmaku.ijk.media/ijkplayer-java/0.4.5.1/8b5363e67da16effb123991ef8d8dd1deb365241/ijkplayer-java-0.4.5.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

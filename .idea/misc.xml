@@ -3,22 +3,11 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
-  <component name="MavenProjectsManager">
-    <option name="originalFiles">
-      <list>
-        <option value="$PROJECT_DIR$/../zxing/pom.xml" />
-      </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/../zxing/android-core/pom.xml" />
-        <option value="$PROJECT_DIR$/../zxing/android-integration/pom.xml" />
-        <option value="$PROJECT_DIR$/../zxing/core/pom.xml" />
-        <option value="$PROJECT_DIR$/../zxing/javase/pom.xml" />
-        <option value="$PROJECT_DIR$/../zxing/pom.xml" />
-        <option value="$PROJECT_DIR$/../zxing/zxing.appspot.com/pom.xml" />
-        <option value="$PROJECT_DIR$/../zxing/zxingorg/pom.xml" />
-      </set>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="NullableNotNullManager">
@@ -55,7 +44,7 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

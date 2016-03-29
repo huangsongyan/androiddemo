@@ -17,7 +17,7 @@ android {
             // stl "stlport_shared"  这个发现在模拟器找不到 libstlport_shared.so
             // stl "gnustl_static" 这个可以通过
             stl "stlport_static"
-            ldLibs "log"
+            ldLibs "log","gcc"
             // ldLibs "log", "EGL", "android", "jnigraphics", "GLESv1_CM"
 
             /*

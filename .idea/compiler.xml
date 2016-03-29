@@ -17,51 +17,6 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Annotation profile for android-core" enabled="true">
-        <sourceOutputDir name="target\generated-sources\annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for javase" enabled="true">
-        <sourceOutputDir name="target\generated-sources\annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for zxing.appspot.com" enabled="true">
-        <sourceOutputDir name="target\generated-sources\annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for android-integration" enabled="true">
-        <sourceOutputDir name="target\generated-sources\annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for core" enabled="true">
-        <sourceOutputDir name="target\generated-sources\annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for zxingorg" enabled="true">
-        <sourceOutputDir name="target\generated-sources\annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="android-core" target="1.7" />
-      <module name="android-integration" target="1.7" />
-      <module name="core" target="1.7" />
-      <module name="javase" target="1.7" />
-      <module name="zxing-parent" target="1.5" />
-      <module name="zxing.appspot.com" target="1.7" />
-      <module name="zxingorg" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>

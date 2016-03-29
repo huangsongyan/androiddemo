@@ -1,0 +1,1 @@
+### lib_mediajni.so android自带wav转amr
