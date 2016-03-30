@@ -21,6 +21,8 @@
 
         <activity android:name=".jni.NdkDemo"/>
         <activity android:name=".ui.QRImage"/>
+        <activity android:name=".ui.TranslucentView"/>
+        <activity android:name=".ui.DrawView"/>
     </application>
 
 </manifest>

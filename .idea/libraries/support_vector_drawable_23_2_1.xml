@@ -7,8 +7,6 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://E:/android_develop_tools/android_sdk/extras/android/m2repository/com/android/support/support-vector-drawable/23.2.1/support-vector-drawable-23.2.1-sources.jar!/" />
-      <root url="jar://E:/android_develop_tools/android_sdk/extras/android/m2repository/com/android/support/support-vector-drawable/23.2.1/support-vector-drawable-23.2.1-sources.jar!/" />
-      <root url="jar://E:/android_develop_tools/android_sdk/extras/android/m2repository/com/android/support/support-vector-drawable/23.2.1/support-vector-drawable-23.2.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

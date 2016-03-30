@@ -1,1 +1,1 @@
-include ':app', ':zxing', ':ijkplayer', ':soundtouch'
+include ':app', ':zxing', ':ijkplayer', ':soundtouch', ':colorstatusbar'

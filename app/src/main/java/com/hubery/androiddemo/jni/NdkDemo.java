@@ -9,7 +9,8 @@ import android.widget.TextView;
 import com.hubery.androiddemo.R;
 import com.hubery.androiddemo.comment.AppAdapter;
 import com.hubery.androiddemo.comment.ViewHolder;
-import com.hubery.androiddemo.ui.base.BaseActivity;
+import com.hubery.androiddemo.ui.base.AppActivity;
+import com.hubery.androiddemo.ui.base.AppTitleActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,7 +22,7 @@ import butterknife.OnItemClick;
 /**
  * Created by Administrator on 2016/3/24.
  */
-public class NdkDemo extends BaseActivity {
+public class NdkDemo extends AppTitleActivity {
 
 
     @Bind(R.id.demoListView)

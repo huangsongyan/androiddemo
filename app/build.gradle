@@ -35,6 +35,11 @@ android {
         }
     }
 
+    //dex增量编译,据说会加快编译速度
+    dexOptions {
+        incremental true
+    }
+
     buildTypes {
         release {
             minifyEnabled false

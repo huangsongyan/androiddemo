@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/BaseAppTheme">
+        <!--Translucent模式,会把状态栏设为透明，实际上是一种全屏模式,布局的内容会状态栏上面，也可在代码设置 最好在代码设置-->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+</resources>
