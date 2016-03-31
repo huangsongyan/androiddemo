@@ -68,6 +68,7 @@ public class SampleMediaListFragment extends Fragment {
         });
 
         mAdapter.addItem("rtmp://live.hkstv.hk.lxdns.com/live/hks", "香港卫视");
+        mAdapter.addItem("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", "MP4地址");
         mAdapter.addItem("http://gslb.tv.sohu.com/live?cid=23&type=hls", "广西卫视");
         mAdapter.addItem("http://gslb.tv.sohu.com/live?cid=222775&type=hls", "深圳卫视");
         mAdapter.addItem("http://202.102.79.115:554/ckj7tec1/cctv10.stream/playlist.m3u8", "CCTV10-科教");
